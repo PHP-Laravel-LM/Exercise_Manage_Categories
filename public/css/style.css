@@ -1,0 +1,156 @@
+.main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 650px;
+  font-size: 14px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main table.tree-table {
+  margin-top: 1rem;
+  border-spacing: 0;
+  table-layout: fixed;
+  width: 450px;
+  max-width: 450px;
+}
+
+.main table.tree-table .title {
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.05rem;
+  background-color: #DDD;
+}
+
+.main table.tree-table tr,
+.main table.tree-table td {
+  border: 1px solid #333;
+}
+
+.main table.tree-table tr:last-child td {
+  border-top: none;
+  vertical-align: top;
+  white-space: nowrap;
+  overflow: scroll;
+  height: 460px;
+}
+
+.main table.tree-table .tree {
+  list-style: none;
+}
+
+.main table.tree-table td .root {
+  -webkit-padding-start: 5px;
+          padding-inline-start: 5px;
+}
+
+.main .content {
+  width: 100%;
+  padding: 0px 5%;
+}
+
+.main .content .create .component {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  margin-bottom: 1rem;
+}
+
+.main .content .create .component span.title {
+  padding-right: 0.25rem;
+}
+
+.main .content .create .component .item {
+  margin-left: 1rem;
+}
+
+.main .content .create .component .item:last-child {
+  margin-left: 2rem;
+}
+
+.main .content .create .component select,
+.main .content .create .component input[type=text] {
+  padding: 0.35rem 0.5rem;
+}
+
+.main .content .create .submit {
+  text-align: right;
+  padding-right: 1rem;
+}
+
+.main .content .create .submit button {
+  border: none;
+  padding: 0.5rem 0.75rem;
+  background-color: #DDD;
+}
+
+.main .content .list table.detail {
+  width: 100%;
+  border-spacing: 0;
+}
+
+.main .content .list table.detail tr,
+.main .content .list table.detail td,
+.main .content .list table.detail th {
+  border: 1px solid #333;
+  text-align: center;
+}
+
+.main .content .list table.detail td {
+  border-bottom: none;
+}
+
+.main .content .list table.detail tr:last-child td {
+  border-bottom: 1px solid;
+}
+
+.main .content .list table.detail th {
+  border-bottom: none;
+  background-color: #DDD;
+}
+
+.main .content .list table.detail td,
+.main .content .list table.detail th {
+  padding: 0.25rem 0.5rem;
+}
+
+.main .content .list table.detail th:not(:first-child),
+.main .content .list table.detail td:not(:first-child) {
+  border-left: none;
+}
+
+.main .content .list table.detail th:nth-last-child(1),
+.main .content .list table.detail th:nth-last-child(2) {
+  display: none;
+}
+
+.main .content .list table.detail a {
+  text-decoration: none;
+}
+
+.main .content .list table.detail a.edit {
+  color: #111;
+}
+
+.main .content .list table.detail a.del {
+  color: #F22;
+}
+
+.main .content .list .pagination {
+  text-align: center;
+}
+
+.main .content .list .pagination a {
+  font-size: 1.05rem;
+  text-decoration: none;
+}
+
+.main .content h3.title {
+  font-size: 1.05rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding-bottom: 0.15rem;
+  border-bottom: 1px solid #333;
+}
+
