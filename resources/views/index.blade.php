@@ -54,6 +54,7 @@ function drawTree($categories, $node, $isRoot = false)
 <head>
     <title>Manage Categories</title>
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -93,7 +94,7 @@ function drawTree($categories, $node, $isRoot = false)
                     </div>
                 </div>
                 <div class="submit">
-                    <button type="button">Create / Save</button>
+                    <button type="button" onclick="submit(this)">Create / Save</button>
                 </div>
             </div>
             <div class="list">
@@ -115,7 +116,7 @@ function drawTree($categories, $node, $isRoot = false)
                         for ($index; $index < $sizeCategories && $index < $size; $index++) {
                             $category = $categories[$index];
                             echo '<tr class="row">';
-                            echo '<td style="width: 7%">'. $category['id'] .'</td>';
+                            echo '<td style="width: 7%" id="id">'. $category['id'] .'</td>';
                             echo '<td style="width: 20%">'. $category['name'] .'</td>';
                             $parent = findParent($categories, $category['parentId']);
                             echo '<td style="width: 20%">'. $parent['name'] .'</td>';
@@ -129,8 +130,8 @@ function drawTree($categories, $node, $isRoot = false)
                             }
                             $strChildren = substr($strChildren, 0, strlen($strChildren) - 2);
                             echo '<td style="width: 39%">'. $strChildren .'</td>';
-                            echo '<td style="width: 7%"><a class="edit" href="#">Edit</a></td>';
-                            echo '<td style="width: 7%"><a class="del" href="#">Delete</a></td>';
+                            echo '<td style="width: 7%"><a class="edit" href="javascript:void(0)" onclick="getCategory(this)">Edit</a></td>';
+                            echo '<td style="width: 7%"><a class="del" href="javascript:void(0)" onclick="deleteCategory(this)">Delete</a></td>';
                             echo '</tr>';
                         }
                     ?>
@@ -146,8 +147,8 @@ function drawTree($categories, $node, $isRoot = false)
             </div>
         </div>
     </article>
-    <script src="{{ asset('js/jquery.min.js') }}" type="text/javascript"></script>
     <script src="{{ asset('js/app.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('js/action.js') }}" type="text/javascript"></script>
 </body>
 
 </html>

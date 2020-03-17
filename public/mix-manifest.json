@@ -1,7 +1,6 @@
 {
+    "/js/action.js": "/js/action.js",
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
-    "/css/style.css": "/css/style.css",
-    "/js/bootstrap.js": "/js/bootstrap.js",
-    "/js/jquery.min.js": "/js/jquery.min.js"
+    "/css/style.css": "/css/style.css"
 }
