@@ -8,10 +8,13 @@ use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 class ControllerCategory extends Controller
 {
-    public function index(Request $request)
+    public function index(Request $request, $page = 1)
     {
-        $categories = ModelCategory::all();
-        return view('index', ['categories' => $categories]);
+        $categories = ModelCategory::all()->toArray();
+        return view('index', [
+            'categories'    => $categories,
+            'page'          => $page
+        ]);
     }
 
     public function getCategory(Request $request, $id)

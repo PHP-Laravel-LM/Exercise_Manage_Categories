@@ -82,6 +82,7 @@
                     border: none;
                     padding: 0.5rem 0.75rem;
                     background-color: #DDD;
+                    cursor: pointer;
                 }
             }
         }
@@ -141,6 +142,10 @@
 
             .pagination {
                 text-align: center;
+
+                .page {
+                    margin: 0 0.5rem;
+                }
 
                 a {
                     font-size: 1.05rem;

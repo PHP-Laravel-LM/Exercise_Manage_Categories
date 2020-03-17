@@ -83,6 +83,7 @@
   border: none;
   padding: 0.5rem 0.75rem;
   background-color: #DDD;
+  cursor: pointer;
 }
 
 .main .content .list table.detail {
@@ -139,6 +140,10 @@
 
 .main .content .list .pagination {
   text-align: center;
+}
+
+.main .content .list .pagination .page {
+  margin: 0 0.5rem;
 }
 
 .main .content .list .pagination a {

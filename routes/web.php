@@ -12,3 +12,4 @@
 */
 
 Route::get('/', 'ControllerCategory@index');
+Route::get('/categories/{page}', 'ControllerCategory@index');
